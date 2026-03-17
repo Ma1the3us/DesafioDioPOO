@@ -1,8 +1,6 @@
 package br.com.dio.desafio.dominio;
+public class Curse extends Conteudo {
 
-public class Curse {
-private String titulo;
-    private String descricao;
     private  int cargaHoratia ;
     private Mentoria mentoria;
 
@@ -23,5 +21,10 @@ private String titulo;
                 ", cargaHoratia=" + cargaHoratia +
                 ", mentoria=" + mentoria +
                 '}';
+    }
+
+    @Override
+    public double calcularxp() {
+        return XP_PADRAO*cargaHoratia;
     }
 }
